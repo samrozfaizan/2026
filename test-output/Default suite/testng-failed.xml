@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="roughWork.Interview1">
+      <class name="weakTopics.WeakTopicsToCover">
         <methods>
-          <include name="destinationCity"/>
           <include name="envSetup"/>
-          <include name="departureCity"/>
+          <include name="producingStaleElement"/>
+          <include name="captureOnFailure"/>
+          <include name="childWindowActions"/>
         </methods>
-      </class> <!-- roughWork.Interview1 -->
+      </class> <!-- weakTopics.WeakTopicsToCover -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
