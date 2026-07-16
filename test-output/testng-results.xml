@@ -1,99 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="5" passed="4" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-04-02T14:29:05 IST" name="Default suite" finished-at="2026-04-02T14:29:29 IST" duration-ms="24678">
+  <suite started-at="2026-07-13T19:22:28 IST" name="Default suite" finished-at="2026-07-13T19:22:35 IST" duration-ms="6736">
     <groups>
     </groups>
-    <test started-at="2026-04-02T14:29:05 IST" name="Default test" finished-at="2026-04-02T14:29:29 IST" duration-ms="24678">
-      <class name="weakTopics.WeakTopicsToCover">
-        <test-method is-config="true" signature="envSetup()[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:05 IST" name="envSetup" finished-at="2026-04-02T14:29:14 IST" duration-ms="9597" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- envSetup -->
-        <test-method signature="openNewTab()[pri:1, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:14 IST" name="openNewTab" finished-at="2026-04-02T14:29:16 IST" duration-ms="1585" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- openNewTab -->
-        <test-method is-config="true" signature="captureOnFailure(org.testng.ITestResult)[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:16 IST" name="captureOnFailure" finished-at="2026-04-02T14:29:16 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=openNewTab status=SUCCESS method=WeakTopicsToCover.openNewTab()[pri:1, instance:weakTopics.WeakTopicsToCover@173ed316] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureOnFailure -->
-        <test-method signature="windowsHandling()[pri:2, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:16 IST" name="windowsHandling" finished-at="2026-04-02T14:29:16 IST" duration-ms="118" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- windowsHandling -->
-        <test-method is-config="true" signature="captureOnFailure(org.testng.ITestResult)[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:16 IST" name="captureOnFailure" finished-at="2026-04-02T14:29:16 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=windowsHandling status=SUCCESS method=WeakTopicsToCover.windowsHandling()[pri:2, instance:weakTopics.WeakTopicsToCover@173ed316] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureOnFailure -->
-        <test-method signature="childWindowActions()[pri:3, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:16 IST" name="childWindowActions" finished-at="2026-04-02T14:29:20 IST" duration-ms="3742" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- childWindowActions -->
-        <test-method is-config="true" signature="captureOnFailure(org.testng.ITestResult)[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:20 IST" name="captureOnFailure" finished-at="2026-04-02T14:29:20 IST" duration-ms="4" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=childWindowActions status=SUCCESS method=WeakTopicsToCover.childWindowActions()[pri:3, instance:weakTopics.WeakTopicsToCover@173ed316] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureOnFailure -->
-        <test-method signature="producingStaleElement()[pri:4, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:20 IST" name="producingStaleElement" finished-at="2026-04-02T14:29:29 IST" depends-on-methods="weakTopics.WeakTopicsToCover.childWindowActions" duration-ms="8847" status="FAIL">
-          <exception class="org.openqa.selenium.StaleElementReferenceException">
+    <test started-at="2026-07-13T19:22:28 IST" name="Default test" finished-at="2026-07-13T19:22:35 IST" duration-ms="6736">
+      <class name="roughWork.TestShashi">
+        <test-method signature="test()[pri:0, instance:roughWork.TestShashi@45099dd3]" started-at="2026-07-13T19:22:28 IST" name="test" finished-at="2026-07-13T19:22:35 IST" duration-ms="6518" status="FAIL">
+          <exception class="java.lang.ArithmeticException">
             <message>
-              <![CDATA[stale element reference: stale element not found
-  (Session info: chrome=146.0.7680.165)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a618aacb86773cf8c5ca4907b8ab8bd, sendKeysToElement {value=[Ljava.lang.CharSequence;@36dce7ed, id=f.AF9DAD22D1F29039A1FB1F67AAF1D14C.d.36C1BD81B3DB0ADD85FD3411CBF24753.e.4}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\samro\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60500}, goog:processID: 38572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60500/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2a618aacb86773cf8c5ca4907b8ab8bd)] -> name: email]
-Session ID: 2a618aacb86773cf8c5ca4907b8ab8bd]]>
+              <![CDATA[/ by zero]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.StaleElementReferenceException: stale element reference: stale element not found
-  (Session info: chrome=146.0.7680.165)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#stale-element-reference-exception
-Build info: version: '4.20.0', revision: '866c76ca80'
-System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.3'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [2a618aacb86773cf8c5ca4907b8ab8bd, sendKeysToElement {value=[Ljava.lang.CharSequence;@36dce7ed, id=f.AF9DAD22D1F29039A1FB1F67AAF1D14C.d.36C1BD81B3DB0ADD85FD3411CBF24753.e.4}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 146.0.7680.165, chrome: {chromedriverVersion: 146.0.7680.165 (4b989da09e1..., userDataDir: C:\Users\samro\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:60500}, goog:processID: 38572, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:60500/devtoo..., se:cdpVersion: 146.0.7680.165, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (2a618aacb86773cf8c5ca4907b8ab8bd)] -> name: email]
-Session ID: 2a618aacb86773cf8c5ca4907b8ab8bd
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:518)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:110)
-at weakTopics.WeakTopicsToCover.producingStaleElement(WeakTopicsToCover.java:110)
+              <![CDATA[java.lang.ArithmeticException: / by zero
+at roughWork.TestShashi.test(TestShashi.java:19)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
@@ -122,37 +43,11 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.StaleElementReferenceException -->
+          </exception> <!-- java.lang.ArithmeticException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- producingStaleElement -->
-        <test-method is-config="true" signature="captureOnFailure(org.testng.ITestResult)[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:29 IST" name="captureOnFailure" finished-at="2026-04-02T14:29:29 IST" duration-ms="282" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=producingStaleElement status=FAILURE method=WeakTopicsToCover.producingStaleElement()[pri:4, instance:weakTopics.WeakTopicsToCover@173ed316] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureOnFailure -->
-        <test-method signature="handleStaleElement()[pri:5, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:29 IST" name="handleStaleElement" finished-at="2026-04-02T14:29:29 IST" duration-ms="302" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- handleStaleElement -->
-        <test-method is-config="true" signature="captureOnFailure(org.testng.ITestResult)[pri:0, instance:weakTopics.WeakTopicsToCover@173ed316]" started-at="2026-04-02T14:29:29 IST" name="captureOnFailure" finished-at="2026-04-02T14:29:29 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=handleStaleElement status=SUCCESS method=WeakTopicsToCover.handleStaleElement()[pri:5, instance:weakTopics.WeakTopicsToCover@173ed316] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- captureOnFailure -->
-      </class> <!-- weakTopics.WeakTopicsToCover -->
+        </test-method> <!-- test -->
+      </class> <!-- roughWork.TestShashi -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

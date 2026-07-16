@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="weakTopics.WeakTopicsToCover">
+      <class name="roughWork.TestShashi">
         <methods>
-          <include name="envSetup"/>
-          <include name="producingStaleElement"/>
-          <include name="captureOnFailure"/>
-          <include name="childWindowActions"/>
+          <include name="test"/>
         </methods>
-      </class> <!-- weakTopics.WeakTopicsToCover -->
+      </class> <!-- roughWork.TestShashi -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
