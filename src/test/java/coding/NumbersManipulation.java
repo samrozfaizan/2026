@@ -72,7 +72,7 @@ public class NumbersManipulation {
 				secondMax=num4[i];
 			}
 		}
-		System.out.println(secondMax);
+//		System.out.println(secondMax);
 		
 	}
 	
