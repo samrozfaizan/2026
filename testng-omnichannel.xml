@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="OmnichannelSuite" parallel="methods" thread-count="5">
+  <test name="OmnichannelRadioButtonsTest">
+    <classes>
+      <class name="selenium26.Omnichannel26"/>
+    </classes>
+  </test>
+</suite>

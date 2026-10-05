@@ -14,6 +14,8 @@ import org.openqa.selenium.support.ui.*;
 import org.testng.ITestResult;
 import org.testng.annotations.*;
 
+import com.epam.healenium.SelfHealingDriver;
+
 public class WeakTopicsToCover {
 
     WebDriver driver;
@@ -27,7 +29,14 @@ public class WeakTopicsToCover {
 
     @BeforeClass
     public void envSetup() {
-        driver = new ChromeDriver();
+        WebDriver delegate = new ChromeDriver();
+        try {
+            driver = SelfHealingDriver.create(delegate);
+        } catch (Exception e) {
+            com.epam.healenium.SelfHealingEngine engine = new com.epam.healenium.SelfHealingEngine(delegate);
+            SelfHealingDriver.setEngineFields(delegate, engine);
+            driver = SelfHealingDriver.create(engine);
+        }
         driver.manage().window().maximize();
         wait = new WebDriverWait(driver, Duration.ofSeconds(20));
         driver.get("https://www.linkedin.com/home");
@@ -61,7 +70,13 @@ public class WeakTopicsToCover {
 
     @Test(priority = 1)
     public void openNewTab() {
-        wait.until(ExpectedConditions.elementToBeClickable(googleBtn)).click();
+        try {
+            WebElement el = driver.findElement(googleBtn); // Triggers healing if broken
+            wait.until(ExpectedConditions.elementToBeClickable(el)).click();
+        } catch (Exception e) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", driver.findElement(googleBtn));
+        }
     }
 
     @Test(priority = 2)
@@ -84,14 +99,20 @@ public class WeakTopicsToCover {
     @Test(priority = 3)
     public void childWindowActions() {
 
-        WebElement email = wait.until(ExpectedConditions.visibilityOfElementLocated(emailField));
+        WebElement emailEl = driver.findElement(emailField); // Triggers healing if broken
+        WebElement email = wait.until(ExpectedConditions.visibilityOf(emailEl));
         email.sendKeys("samroz");
 
-        WebElement next = wait.until(ExpectedConditions.elementToBeClickable(nextBtn));
-
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("arguments[0].scrollIntoView({block:'center'});", next);
-        js.executeScript("arguments[0].click();", next);
+        try {
+            WebElement nextEl = driver.findElement(nextBtn); // Triggers healing if broken
+            wait.until(ExpectedConditions.elementToBeClickable(nextEl));
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].scrollIntoView({block:'center'});", nextEl);
+            nextEl.click();
+        } catch (Exception e) {
+            JavascriptExecutor js = (JavascriptExecutor) driver;
+            js.executeScript("arguments[0].click();", driver.findElement(nextBtn));
+        }
     }
 
     // ❌ This will fail intentionally (to test screenshot)
@@ -101,8 +122,8 @@ public class WeakTopicsToCover {
         driver.switchTo().window(parentWin);
         driver.navigate().to("https://www.facebook.com/");
 
-        WebElement element = wait.until(
-                ExpectedConditions.presenceOfElementLocated(fbEmail));
+        WebElement fbEl = driver.findElement(fbEmail); // Triggers healing if broken
+        WebElement element = wait.until(ExpectedConditions.visibilityOf(fbEl));
 
         driver.navigate().refresh();
 
@@ -113,9 +134,10 @@ public class WeakTopicsToCover {
     @Test(priority = 5)
     public void handleStaleElement() {
 
+        WebElement fbEl = driver.findElement(fbEmail); // Triggers healing if broken
         WebElement element = wait.until(
                 ExpectedConditions.refreshed(
-                        ExpectedConditions.presenceOfElementLocated(fbEmail)
+                        ExpectedConditions.visibilityOf(fbEl)
                 )
         );
 

@@ -3,11 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="roughWork.TestShashi">
+      <class name="shashiRoughwork.Demo1">
         <methods>
-          <include name="test"/>
+          <include name="assertion"/>
+          <include name="dropDown"/>
+          <include name="envSetup"/>
+          <include name="inputFieldButton"/>
+          <include name="tearDown"/>
+          <include name="WindowHandles"/>
+          <include name="iframe"/>
         </methods>
-      </class> <!-- roughWork.TestShashi -->
+      </class> <!-- shashiRoughwork.Demo1 -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

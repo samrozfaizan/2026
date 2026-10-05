@@ -20,22 +20,26 @@ public class Interview1 {
 			driver.get("https://blazedemo.com/");
 		}
 		
-		@Test(priority=1)
+		@Test(priority = 1)
 		public void departureCity() throws InterruptedException {
-			Thread.sleep(5000);
-			driver.findElement(By.xpath("//select[@name='fromPort']"));
-			Select select = (Select) driver;
-			select.selectByIndex(3);
-	         
+		    Thread.sleep(5000);
+		    // 1. Pehle dropdown element ko WebElement me store karein
+		    WebElement fromPortElement = driver.findElement(By.xpath("//select[@name='fromPort']"));
+		    
+		    // 2. Select class ke constructor me us element ko pass karein (new keyword ke saath)
+		    Select selectFrom = new Select(fromPortElement);
+		    selectFrom.selectByIndex(3);
 		}
-		
-		@Test
+
+		@Test(priority = 2)
 		public void destinationCity() throws InterruptedException {
-			Thread.sleep(5000);
-			driver.findElement(By.xpath("//select[@name='toPort']"));
-			Select select = (Select) driver;
-			select.selectByIndex(3);
-	         
+		    Thread.sleep(5000);
+		    // 1. Destination dropdown element find karein
+		    WebElement toPortElement = driver.findElement(By.xpath("//select[@name='toPort']"));
+		    
+		    // 2. New Select object banakar pass karein
+		    Select selectTo = new Select(toPortElement);
+		    selectTo.selectByIndex(3);
 		}
 
 		@Test(priority=2)

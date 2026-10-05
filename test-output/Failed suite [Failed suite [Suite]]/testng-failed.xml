@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Failed suite [Failed suite [Suite]]]">
+  <test thread-count="5" name="Test(failed)(failed)(failed)">
+    <classes>
+      <class name="weakTopics.WeakTopicsToCover">
+        <methods>
+          <include name="envSetup"/>
+          <include name="producingStaleElement"/>
+          <include name="captureOnFailure"/>
+          <include name="handleStaleElement"/>
+          <include name="childWindowActions"/>
+        </methods>
+      </class> <!-- weakTopics.WeakTopicsToCover -->
+    </classes>
+  </test> <!-- Test(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [Suite]]] -->

@@ -35,7 +35,7 @@ public class OmnicChannelNew {
 	
 	@Test(retryAnalyzer =RetryLogic.class) 
 	public void test2() {
-		driver.findElement(By.name("pas")).sendKeys("asdaskj");;
+		driver.findElement(By.name("pass")).sendKeys("asdaskj");;
 	}
 	
 	@Test 
